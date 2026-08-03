@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayesha Shahid — Portfolio</title>
+<meta name="description" content="I build scalable machine learning pipelines, ship full software projects, and design user-centered UI/UX interfaces that turn complex problems into usable, high-impact experiences.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fraunces:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" aria-label="Home" style="display:flex;align-items:center;gap:10px;">
+      <span class="monogram">AH</span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#design">Design</a>
+      <a href="#about">About</a>
+      <a href="#posts">Posts</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<header class="hero-band" id="top">
+  <span class="hero-blob blob-1"></span>
+  <span class="hero-blob blob-2"></span>
+  <span class="hero-blob blob-3"></span>
+  <div class="wrap">
+    <div class="hero-top">
+      <div class="headshot"><img src="headshot.jpg" alt="Ayesha Shahid"></div>
+      <div>
+        <h1>Ayesha Shahid</h1>
+        <div class="role-line">Machine Learning Engineer · Software Developer · UI/UX Designer</div>
+        <p class="claim">I turn ambiguous problems into working systems — ML pipelines that make sense of messy data, software projects built end-to-end, and interfaces people actually enjoy using.</p>
+      </div>
+    </div>
+    <div class="hero-links">
+      <a href="https://github.com/ayeshaaaaaaaaah/" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/ayesha-shahid-8a31b5391/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="AyeshaShahid_CV.pdf" target="_blank" rel="noopener">CV</a>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#work">Explore case studies</a>
+      <a class="btn btn-secondary" href="#contact" data-open-contact>Schedule a call</a>
+    </div>
+    <a class="design-badge" href="#design">Also designs UI/UX in Figma ↓</a>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section id="work">
+    <div class="section-label reveal">Featured case study</div>
+    <h2 class="reveal">FlyRank AI — Content Performance Clustering</h2>
+    <div class="feature-card reveal">
+      <p>Segmented a 30,000-row content dataset into 6 actionable performance archetypes using a composite numeric + TF-IDF feature matrix and K-Means, validated against HDBSCAN.</p>
+      <div class="beats">
+        <div>
+          <div class="beat-label">Problem</div>
+          <p>FlyRank had 30K rows of content metrics and no clear strategy for what content to prioritize — the ask was just "find insights in the data."</p>
+        </div>
+        <div>
+          <div class="beat-label">What I did</div>
+          <p>Framed it as unsupervised clustering. Engineered a composite feature matrix (engagement ratios + TF-IDF tags), tested K-Means against HDBSCAN with silhouette validation, and deliberately excluded vanity metrics so clusters reflected true retention, not viral spikes.</p>
+        </div>
+        <div>
+          <div class="beat-label">What came of it</div>
+          <p>6 distinct performance archetypes, each documented in plain English so marketing leads could decide what to produce, pause, or iterate on.</p>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="flyrank-case-study.html">Read full technical deep dive →</a>
+      </div>
+    </div>
+
+    <div class="section-label reveal" style="margin-top:44px;">Machine learning</div>
+    <div class="grid">
+      <div class="project-card reveal">
+        <h3>Adult Income Prediction Web Engine</h3>
+        <p>End-to-end ML system modeling demographic, education, and occupational attributes to predict whether annual income exceeds $50,000.</p>
+        <p style="font-size:14px;"><strong>Preprocessing:</strong> LabelEncoder for categorical mapping, 80/20 train-test split with a fixed random state to prevent leakage, StandardScaler for distance-based models like KNN.</p>
+        <p style="font-size:14px;"><strong>Engineered features:</strong> <code>capital_net</code> (capital.gain − capital.loss), <code>hours_month</code> (hours.per.week × 4), <code>is_mature</code> (binary split at age 35).</p>
+        <div class="table-scroll">
+          <table class="metrics-table">
+            <thead><tr><th>Model</th><th>Accuracy</th><th>Precision</th><th>Recall</th><th>F1</th></tr></thead>
+            <tbody>
+              <tr><td>Decision Tree</td><td>0.8589</td><td>0.7452</td><td>0.6109</td><td>0.6714</td></tr>
+              <tr><td>Random Forest</td><td>0.8607</td><td>0.8163</td><td>0.5290</td><td>0.6419</td></tr>
+              <tr><td>Naive Bayes</td><td>0.7975</td><td>0.6557</td><td>0.2986</td><td>0.4104</td></tr>
+              <tr><td>KNN</td><td>0.8334</td><td>0.6652</td><td>0.5921</td><td>0.6265</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:13px;color:var(--muted);">Random Forest gave the best accuracy/precision; Decision Tree gave the best overall F1 balance.</p>
+        <a href="https://github.com/ayeshaaaaaaaaah/" target="_blank" rel="noopener">View source →</a>
+      </div>
+      <div class="project-card reveal">
+        <h3>AromaMatch AI</h3>
+        <p>Content-based fragrance recommender using TF-IDF vectorization and cosine similarity over a multi-feature perfume dataset. Deployed as an interactive Streamlit app.</p>
+        <span class="stat">86.65% match accuracy</span>
+        <a href="https://github.com/ayeshaaaaaaaaah/AI_AromaMatch" target="_blank" rel="noopener">View source →</a>
+      </div>
+      <div class="project-card reveal">
+        <h3>Twitter Sentiment Analysis</h3>
+        <p>Modular pipeline combining regex cleaning, emoji retention, TF-IDF vectorization, and Logistic Regression inside a scikit-learn Pipeline container.</p>
+        <span class="stat">≥80% F1-score</span>
+        <a href="https://github.com/ayeshaaaaaaaaah/" target="_blank" rel="noopener">View source →</a>
+      </div>
+    </div>
+
+    <div class="section-label reveal" style="margin-top:44px;">Software projects</div>
+    <div class="grid">
+      <div class="project-card reveal">
+        <h3>BiteBase — Discover Flavors</h3>
+        <p>Full-stack food ordering platform with a customer-facing interface and an admin dashboard, backed by a database — restaurant browsing, per-dish ordering, live cart totals, and order status management.</p>
+        <div class="project-image-row">
+          <div class="project-image"><img src="bitebase-1.jpg" alt="BiteBase restaurant listing and menu view"></div>
+          <div class="project-image"><img src="bitebase-2.jpg" alt="BiteBase admin order dashboard"></div>
+        </div>
+        <a href="https://github.com/ayeshaaaaaaaaah/" target="_blank" rel="noopener">View source →</a>
+      </div>
+      <div class="project-card reveal">
+        <h3>Organ Donation System</h3>
+        <p>C++ system for registering donors and recipients and matching them against organ and eligibility criteria.</p>
+        <a href="https://github.com/ayeshaaaaaaaaah/" target="_blank" rel="noopener">View source →</a>
+      </div>
+      <div class="project-card reveal">
+        <h3>Parking Management System</h3>
+        <p>C++ console system for managing a parking facility — tracks individual slot numbers and status, calculates fare owed per vehicle, and reports live available space as slots fill and empty.</p>
+      </div>
+      <div class="project-card reveal">
+        <h3>Smart Inventory Management System</h3>
+        <p>Java system with a full UI for stock control — records item name and price, tracks quantity on hand, and supports adding, updating, and removing inventory as stock changes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="section-label reveal">Work & experience</div>
+    <h2 class="reveal">Experience</h2>
+
+    <div class="exp-card reveal">
+      <div class="exp-card-top">
+        <div>
+          <h3>Machine Learning Intern</h3>
+          <div class="exp-org">FlyRank AI</div>
+        </div>
+        <span class="exp-badge">Current</span>
+      </div>
+      <p>Developing unsupervised machine learning models, feature engineering pipelines, and semantic clustering logic to analyze content performance metrics and output growth strategies.</p>
+    </div>
+
+    <div class="exp-card reveal">
+      <div class="exp-card-top">
+        <div>
+          <h3>AI Engineer Intern</h3>
+          <div class="exp-org">DecodeLabs</div>
+        </div>
+        <span class="exp-badge">Completed internship</span>
+      </div>
+      <p>Built NLP classification models, rule-based inference engines, and feature vectorization logic. Focused on end-to-end data processing pipelines and text preprocessing algorithms.</p>
+    </div>
+
+    <div class="exp-card reveal">
+      <div class="exp-card-top">
+        <div>
+          <h3>Freelance ML Engineer & UI/UX Designer</h3>
+          <div class="exp-org">Client projects</div>
+        </div>
+        <span class="exp-badge">2 real client projects</span>
+      </div>
+      <p>Delivered custom solutions for real clients across software and design:</p>
+      <p style="font-size:14px;"><strong>Client 1 — Design system & wireframing:</strong> built a full UI/UX design system and wireframes for an app in Figma, from low-fidelity flows through to a structured component system.</p>
+      <p style="font-size:14px;"><strong>Client 2 — Print/poster design:</strong> designed a complete set of A4-format print materials in Figma, handling layout, visual hierarchy, and print-ready structure.</p>
+    </div>
+  </section>
+
+  <section id="design">
+    <div class="section-label reveal">Also design</div>
+    <h2 class="reveal">UI/UX & Product Design</h2>
+    <div class="design-card reveal">
+      <div class="design-card-grid">
+        <div>
+          <p>Alongside ML and software work, I design and prototype interfaces — landing pages, mobile app flows, and design systems — in Figma, covering wireframing through low- and high-fidelity design.</p>
+          <div class="design-skills">
+            <span class="design-pill">Landing pages</span>
+            <span class="design-pill">Mobile app design</span>
+            <span class="design-pill">Prototyping</span>
+            <span class="design-pill">Wireframing</span>
+            <span class="design-pill">Design systems</span>
+            <span class="design-pill">Low-fidelity design</span>
+            <span class="design-pill">High-fidelity design</span>
+          </div>
+          <a href="https://www.figma.com/design/99EupCrjN3WwXtozBPXJoY/Fashion?node-id=360-73&t=YTUZrmfdc0lDBoWf-1" target="_blank" rel="noopener">View Figma work →</a>
+        </div>
+        <a href="https://www.figma.com/design/99EupCrjN3WwXtozBPXJoY/Fashion?node-id=360-73&t=YTUZrmfdc0lDBoWf-1" target="_blank" rel="noopener" class="figma-thumb">
+          <img src="https://www.figma.com/file/99EupCrjN3WwXtozBPXJoY/thumbnail?node-id=360-73&in-better-link-exp=true" alt="Figma design preview">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-label reveal">About</div>
+    <h2 class="reveal">Bio</h2>
+    <p class="reveal">BS AI student interning at FlyRank AI, where I build unsupervised machine learning pipelines on real content performance data. Previously built NLP classifiers, rule-based systems, and recommendation logic at DecodeLabs. Alongside internships, I build full software projects end to end — from C++ and Java systems to ML pipelines and Streamlit apps — and design interfaces in Figma for real clients, sharing code on GitHub and write-ups on LinkedIn.</p>
+    <div class="section-label reveal" style="margin-top:28px;">Technical stack</div>
+    <div class="stack-list reveal">
+      <span class="stack-pill">Python</span>
+      <span class="stack-pill">C++</span>
+      <span class="stack-pill">Java</span>
+      <span class="stack-pill">Scikit-learn</span>
+      <span class="stack-pill">Pandas</span>
+      <span class="stack-pill">Streamlit</span>
+      <span class="stack-pill">Figma</span>
+      <span class="stack-pill">UI/UX</span>
+    </div>
+  </section>
+
+  <section id="posts">
+    <div class="section-label reveal">Coming soon</div>
+    <h2 class="reveal">Posts & Capstone</h2>
+    <p class="reveal">This space will hold write-ups and the capstone project for the FlyRank AI Fluency internship track as they're completed — nothing published here yet.</p>
+  </section>
+
+  <footer id="contact">
+    <div class="section-label reveal">Contact</div>
+    <h2 class="reveal">Get in touch</h2>
+    <p class="reveal">If you need an ML engineer who can turn an ambiguous dataset into interpretable models, a software developer who can ship a working system end to end, or a UI/UX designer who can turn a rough idea into a usable interface — let's talk.</p>
+    <a class="footer-email reveal" href="mailto:ayeshaach027@gmail.com">ayeshaach027@gmail.com</a>
+    <div class="cta-row reveal">
+      <a class="btn btn-primary" href="#" data-open-contact>Schedule a call</a>
+    </div>
+    <p class="footer-note">© 2026 Ayesha Shahid. Built with static HTML/CSS — no framework, by choice.</p>
+  </footer>
+
+</div>
+
+<div class="modal-overlay" id="contact-modal">
+  <div class="modal-box">
+    <button class="modal-close" aria-label="Close">✕</button>
+    <h2>Let's talk</h2>
+    <p>Email me directly — I'll get back to you to find a time that works.</p>
+    <div class="modal-email-row">
+      <span>ayeshaach027@gmail.com</span>
+      <button class="copy-btn" data-email="ayeshaach027@gmail.com">Copy</button>
+    </div>
+    <a class="btn btn-primary" href="mailto:ayeshaach027@gmail.com" style="width:100%;text-align:center;box-sizing:border-box;">Open in email app</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
